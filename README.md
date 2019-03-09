@@ -1,2 +1,2 @@
-# elevators
-Distribution Code for the Elevators Final Project!
+# Elevators
+This is the repository for the elevators final project.
