@@ -9,9 +9,20 @@ void Floor::resetRequests() {
 
 
 void Floor::addPerson(Person p, int request) {
-
-	//TODO: Implement addPerson
+if(numPeople < MAX_PEOPLE_PER_FLOOR){
+	p=person[numPeople];
+	numPeople++;
+	if(request > 0){
+		hasUpRequest=true;
+		hasDownRequest=false;
+	}
+	else{
+		hasUpRequest=false;
+		hasDownRequest=true;
+	}
 }
+}
+
 
 void Floor::removePeople(int indicesToRemove[MAX_PEOPLE_PER_FLOOR], int numPeopleToRemove){
 
