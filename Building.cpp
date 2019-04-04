@@ -2,9 +2,9 @@
 using namespace std;
 
 void Building::spawnPerson(Spawn newPerson){
-
-	//TODO: Implement spawnPerson
-
+	Person p;
+	newPerson.getStartingFloor().addPerson(p,newPerson.getTargetfloor()-newPerson.getStartringFloor());
+	
 }
 
 
