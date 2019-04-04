@@ -3,8 +3,25 @@
 using namespace std;
 
 Move::Move(string commandString) {
-
-    //TODO: Implement Move non-default constructor
+if(commandString==""){
+	isPass=true;
+	isPickup=false;
+}
+else if(commandString.size==4){
+	elevatorId=commandString[1];
+	targetFloor=commandString[3];
+	isPickup=false;
+	isPass=false;
+}
+	
+else if(commandString.size==3){
+	elevatorId=commandString[1];
+	if(commandString[2]=='p'){
+		isPickup=true;
+		isPass=false;
+	}
+}
+    
 }
 
 bool Move::isValidMove(Elevator elevators[NUM_ELEVATORS]) const {
